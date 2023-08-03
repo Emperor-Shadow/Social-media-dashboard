@@ -183,7 +183,7 @@ section .subl{
   color: var(--Dark-Grayish-Blue-text);
 }
 
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   body{
     flex-direction: column;
   }
