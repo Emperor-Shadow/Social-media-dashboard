@@ -1,0 +1,210 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  /*primary*/
+  --LimeGreen: hsl(163, 72%, 41%);
+--BrightRed: hsl(356, 69%, 56%);
+--Facebook: hsl(208, 92%, 53%);
+--Twitter: hsl(203, 89%, 53%);
+--Instagram: linear gradient (to right ,  hsl(37, 97%, 70%) , hsl(329, 70%, 58%));
+--YouTube: hsl(348, 97%, 39%);
+--Toggle-dark: linear-gradient (to right , hsl(210, 78%, 56%) , hsl(146, 68%, 55%));
+--Toggle-light: hsl(230, 22%, 74%);
+/*#### Dark Theme*/
+--Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+--Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+--Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+--Desaturated-Blue-text: hsl(228, 34%, 66%);
+--White-text: hsl(0, 0%, 100%);
+/*#### Light Theme*/
+--White-BG: hsl(0, 0%, 100%);
+--Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+--Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+--Dark-Grayish-Blue-text: hsl(228, 12%, 44%);
+--Very-Dark-Blue-text: hsl(230, 17%, 14%);
+}
+body{
+  background: var(--White-BG);
+  color: var(--Very-Dark-Blue-text);
+}
+span{
+  color: var(--Very-Dark-Blue-text);
+}
+.light{
+  color: var(--Dark-Grayish-Blue-text);
+}
+.toggler-btn-out{
+  background: var(--Toggle-light);
+  border-radius: 20px;
+  position: relative;
+  padding: 10px;
+}
+.toggler .toggler-btn-out .toggler-btn-in{
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: var(--White-BG);
+  z-index: 10;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+.toggle{
+  right: 1px;
+  left: 0;
+}
+.fire {
+  --White-BG: hsl(230, 17%, 14%);
+--Very-Pale-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+--Light-Grayish-Blue-Card-BG:hsl(228, 28%, 20%);
+--Dark-Grayish-Blue-text: hsl(228, 34%, 66%) ;
+--Very-Dark-Blue-text: hsl(0, 0%, 100%);
+}
+.bgtog{
+    background-image: linear-gradient(to left , hsl(210, 78%, 56%) , hsl(146, 68%, 55%));
+}
+.wrapper{
+  width: 100%;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.full{
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+  height: 200px;
+  background: var(--Light-Grayish-Blue-Card-BG);
+  position: relative;
+}
+.sec{
+  position: relative;
+  width: 100%;
+}
+.wrapper .full:nth-of-type(1) .sec .color{
+  display: inline-block;
+  background: var(--Facebook);
+  width: 100%;
+  height: 5px;
+  position: relative ;
+  top: -17px;
+}
+.wrapper .full:nth-of-type(2) .sec .color {
+  background: var(--Twitter); 
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  position: relative ;
+  top: -17px;
+}
+.wrapper .full:nth-of-type(3) .sec .color {
+  background-image: linear-gradient(to right , hsl(37, 97%, 70%) , hsl(329, 70%, 58%)); 
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  position: relative ;
+  top: -17px;
+}
+.wrapper .full:nth-of-type(4) .sec .color {
+  background: var(--YouTube);
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  position: relative ;
+  top: -17px;
+}
+.wrapper .sec .card{
+  background: var(--Light-Grayish-Blue-Card-BG);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: -8px;
+  height: 100%;
+  border-radius: inherit;
+  display: inline-block;
+  text-align: center;
+}
+.social{
+  width: 30px;
+}
+.wrapper .sec .card .sc{
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-weight: 600;
+  color: var(--Dark-Grayish-Blue-text);
+  text-align: center;
+}
+.wrapper .sec .card h1{
+  font-size: 45px;
+  font-weight: 600;
+  margin: 4px 0 -10px 0;
+}
+.wrapper .sec .card p{
+  color: var(--Very-Dark-Blue-text);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 10px;
+}
+.noti{
+  color: var(--LimeGreen);
+}
+.yt{
+  color: var(--BrightRed) !important;
+}
+p{
+  text-align: center;
+}
+.header h1{
+  color: var(--Dark-Grayish-Blue-text);
+}
+
+section{
+  background: var(--Light-Grayish-Blue-Card-BG);
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+section .subh{
+  color: var(--Very-Dark-Blue-text);
+}
+section .subl{
+  color: var(--Dark-Grayish-Blue-text);
+}
+
+@media (min-width: 400px) {
+  body{
+    flex-direction: column;
+  }
+  .full{
+    width: 210px;
+  }
+  .wrapper2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+  }
+  .wrapper2 section{
+    width: 210px;
+    margin-bottom: 0px;
+    height: 150px;
+  }
+  .hed{
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+}
